@@ -1,0 +1,2 @@
+Adjacent Vertices: If two vertex have direct edge
+Degree: No. of edges going through that vertex 

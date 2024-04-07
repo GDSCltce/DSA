@@ -1,0 +1,171 @@
+void printArray(int n, int *arr){
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+void dnfSort(vector<int> &v, int n)
+{
+    int l = 0, h = n - 1, m = 0;
+
+    while (m <= h)
+    {
+        if (v[m] == 0)
+        {
+            swap(v[l], v[m]);
+            m++;
+            l++;
+        }
+        else if (v[m] == 1)
+        {
+            m++;
+        }
+        else if (v[m] == 2)
+        {
+            swap(v[h], v[m]);
+            h--;
+        }
+    }
+}
+
+void wavesort(vector<int> &arr)
+{
+
+    int n = arr.size();
+    for (int i = 1; i < n; i += 2)
+    {
+        if (arr[i] > arr[i - 1])
+        {
+            swap(arr[i], arr[i - 1]);
+        }
+        if (arr[i] > arr[i + 1] && i <= n - 2)
+        {
+            swap(arr[i], arr[i + 1]);
+        }
+    }
+}
+
+#include <iostream>
+using namespace std;
+struct address
+{
+    char city[20];
+    int pin;
+};
+struct employee
+{
+    char name[20];
+    int salary;
+    int id;
+    char month_joining[20];
+    struct address add;
+} emp[10];
+
+int main()
+{
+#ifndef ONLINE_JUDGE
+    freopen("inputf.in", "r", stdin);
+    freopen("outputf.in", "w", stdout);
+#endif
+
+    cout << "The employee information is given as follows:" << endl;
+    cout << endl;
+
+    for (int i = 0; i < 3; i++)
+    {
+        cout << "Employee ID: " << endl;
+        cin >> emp[i].id;
+        cout << "Name: " << endl;
+        cin >> emp[i].name;
+        cout << "Salary: " << endl;
+        cin >> emp[i].salary;
+        cout << "month of joining: " << endl;
+        cin >> emp[i].month_joining;
+        cout << "city: " << endl;
+        cin >> emp[i].add.city;
+        cout << "pincode: " << endl;
+        cin >> emp[i].add.pin;
+        cout << endl;
+    }
+
+    for (int i = 0; i < 3; i++)
+    {
+        cout << "Employee ID: " << emp[i].id << endl;
+        cout << "Name: " << emp[i].name << endl;
+        cout << "Salary: " << emp[i].salary << endl;
+        cout << "Department: " << emp[i].month_joining << endl;
+        cout << "City: " << emp[i].add.city << endl;
+        cout << "Pincode: " << emp[i].add.pin << endl;
+        cout << endl;
+    }
+    return 0;
+}
+
+void wavesort(vector<int> &arr)
+{
+
+    int n = arr.size();
+    for (int i = 1; i < n; i += 2)
+    {
+        if (arr[i] > arr[i - 1])
+        {
+            swap(arr[i], arr[i - 1]);
+        }
+        if (arr[i] > arr[i + 1] && i <= n - 2)
+        {
+            swap(arr[i], arr[i + 1]);
+        }
+    }
+}
+
+void countSort(vector<int> &v, int mx, int mn)
+{
+    vector<int> freq(mx - mn + 1);
+
+    for (int i = 0; i < v.size(); i++)
+    {
+        freq[v[i] - mn]++;
+    }
+
+    for (int i = 1; i < freq.size(); i++)
+    {
+        freq[i] += freq[i - 1];
+    }
+
+    vector<int> ans(v.size());
+    for (int i = v.size() - 1; i >= 0; i--)
+    {
+        ans[--freq[v[i]]] = v[i];
+    }
+
+    for (int i = 0; i < v.size(); i++)
+    {
+        v[i] = ans[i];
+    }
+    return;
+}
+
+void dnfSort(vector<int> &v, int n)
+{
+    int l = 0, h = n - 1, m = 0;
+
+    while (m <= h)
+    {
+        if (v[m] == 0)
+        {
+            swap(v[l], v[m]);
+            m++;
+            l++;
+        }
+        else if (v[m] == 1)
+        {
+            m++;
+        }
+        else if (v[m] == 2)
+        {
+            swap(v[h], v[m]);
+            h--;
+        }
+    }
+}

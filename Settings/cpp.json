@@ -1,0 +1,457 @@
+{
+	// Place your snippets for cpp here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $0, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$0');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"CPP": {
+		"prefix": "u",
+		"body": [
+			"#include <bits/stdc++.h>",
+			"using namespace std;",
+			"",
+			"#define int long long",
+			"constexpr int INF = 1000000010;",
+			"constexpr int mod = 1000000007;",
+			"constexpr int nMax = 2 * 1e5 + 10;",
+			"#define endl '\\n'",
+			"#define siz(x) (int)(x).size()",
+			"#define gri greater<int>()",
+			"#define countSetBit(x) __builtin_popcount(x)",
+			"#define all(x) (x).begin(), (x).end()",
+			"void inarr(vector<int> &x)",
+			"{",
+			"    for (auto &&i : x)",
+			"        cin >> i;",
+			"}",
+			"template <typename T>",
+			"void printarr(T &x)",
+			"{",
+			"    for (auto &&i : x)",
+			"        cout << i << ' ';",
+			"    cout << endl;",
+			"}",
+			"void print2D(vector<vector<int>> &a)",
+			"{",
+			"    for (auto &&v : a)",
+			"    {",
+			"        for (auto &&i : v)",
+			"            cout << i << ' ';",
+			"        cout << endl;",
+			"    }",
+			"}",
+			"struct __CH",
+			"{",
+			"    size_t operator()(uint64_t x) const",
+			"    {",
+			"        static const uint64_t FIXED_RANDOM = chrono::steady_clock::now().time_since_epoch().count();",
+			"        x ^= FIXED_RANDOM;",
+			"        return x ^ (x >> 16);",
+			"    }",
+			"};",
+			"int Ceil(int x, int y)",
+			"{",
+			"    int ans = x / y;",
+			"    if (x % y)",
+			"        ans++;",
+			"    return ans;",
+			"}",
+			"bool comparePair(const pair<int, int> &a, const pair<int, int> &b)",
+			"{",
+			"    return a.first > b.first;",
+			"    return a.second < b.second;",
+			"}",
+			"//---------------------------------",
+			"void _PRE();",
+			"void solve();",
+			"signed main()",
+			"{",
+			"    auto start = chrono::high_resolution_clock::now();",
+			"    ios_base::sync_with_stdio(false);",
+			"    cin.tie(NULL);",
+			"#ifndef ONLINE_JUDGE",
+			"    freopen(\"in.txt\", \"r\", stdin);",
+			"    freopen(\"out.txt\", \"w\", stdout);",
+			"    freopen(\"orror.txt\", \"w\", stderr);",
+			"#endif",
+			"    cout << fixed << setprecision(6);",
+			"    int T = 1;",
+			"    cin >> T;",
+			"    _PRE();",
+			"    for (int tc = 1; tc <= T; tc++)",
+			"    {",
+			"        cerr << \"TEST #\" << tc << \":\\n\";",
+			"        // cout << \"Case #\" << tc << \": \";",
+			"        solve();",
+			"        cout << endl;",
+			"        cerr << endl;",
+			"    }",
+			"    double time_taken = chrono::duration_cast<chrono::nanoseconds>(chrono::high_resolution_clock::now() - start).count();",
+			"    cerr << time_taken * 1e-3 << \"ms\" << endl;",
+			"    return 0;",
+			"}",
+			"void _PRE() {}",
+			"",
+			"void solve()",
+			"{",
+			"    $0",
+			"}"
+		],
+		"description": "CPP"
+	},
+	"long long": {
+		"prefix": "ll",
+		"body": [
+			"long long int "
+		],
+		"description": "long long int "
+	},
+	"for1": {
+		"prefix": "for1",
+		"body": [
+			"for (int i = 1; i <= n; i++)",
+			"{",
+			"    $0",
+			"}"
+		],
+		"description": "for1"
+	},
+	"CPPsmall": {
+		"prefix": "ui",
+		"body": [
+			"#include <bits/stdc++.h>",
+			"using namespace std;",
+			"",
+			"signed main()",
+			"{",
+			"    $0",
+			"    return 0;",
+			"}"
+		],
+		"description": "CPP"
+	},
+	"debug": {
+		"prefix": "debug",
+		"body": [
+			"debug($0);"
+		],
+		"description": "debug"
+	},
+	"vector": {
+		"prefix": "vec",
+		"body": [
+			"vector<$0> ();"
+		],
+		"description": "vector<>"
+	},
+	"vector<int>": {
+		"prefix": "vi",
+		"body": [
+			"vector<int> $1($0);"
+		],
+		"description": "vector<int>"
+	},
+	"set": {
+		"prefix": "st",
+		"body": [
+			"set<$0> st;"
+		],
+		"description": "set<>"
+	},
+	"map": {
+		"prefix": "mp",
+		"body": [
+			"map<$1, $0> mp;"
+		],
+		"description": "map<>"
+	},
+	"unordered_set": {
+		"prefix": "ust",
+		"body": [
+			"unordered_set<$0> st;"
+		],
+		"description": "unordered_set<>"
+	},
+	"unordered_map": {
+		"prefix": "ump",
+		"body": [
+			"unordered_map<$1, $0, __CH> mp;"
+		],
+		"description": "unordered_map<>"
+	},
+	"pair": {
+		"prefix": "pr",
+		"body": [
+			"pair<$1, $0> ;"
+		],
+		"description": "pair<>"
+	},
+	"pair<int, int>": {
+		"prefix": "pii",
+		"body": [
+			"pair<int, int> $0;"
+		],
+		"description": "pair<int, int>"
+	},
+	"stack": {
+		"prefix": "stk",
+		"body": [
+			"stack<$0> stk;"
+		],
+		"description": "stack<>"
+	},
+	"queue": {
+		"prefix": "qu",
+		"body": [
+			"queue<$0> q;"
+		],
+		"description": "queue<>"
+	},
+	"deque": {
+		"prefix": "dq",
+		"body": [
+			"deque<$0> dq;"
+		],
+		"description": "deque<>"
+	},
+	"priority_queue": {
+		"prefix": "pq",
+		"body": [
+			"priority_queue<$1, vector<$1>, greater<$1>> pq;",
+			"$0"
+		],
+		"description": "priority_queue<>"
+	},
+	"sort": {
+		"prefix": "sor",
+		"body": [
+			"sort($0.begin(),$0.end());"
+		],
+		"description": "sort()"
+	},
+	"all()": {
+		"prefix": "all",
+		"body": [
+			"$0.begin(),$0.end()"
+		],
+		"description": "all()"
+	},
+	"Node": {
+		"prefix": "node",
+		"body": [
+			"Node *"
+		],
+		"description": "Node *"
+	},
+	"vector<vector<T>>": {
+		"prefix": "vvec",
+		"body": [
+			"vector<vector<$0>> $1($2, vector<$0>($3));"
+		],
+		"description": "vector<vector<>>"
+	},
+	"vector<vector<int>>": {
+		"prefix": "vvi",
+		"body": [
+			"vector<vector<int>> $0($1, vector<int>($2));"
+		],
+		"description": "vector<vector<int>>"
+	},
+	"3D vector": {
+		"prefix": "vvvi",
+		"body": [
+			"vector<vector<vector<int>>> ${1:name}($2, vector<vector<int>>($3, vector<int>($0)));"
+		],
+		"description": "3D vector"
+	},
+	"TESTCASES": {
+		"prefix": "test",
+		"body": [
+			"int t = 1;",
+			"cin >> t;",
+			"while (t--)",
+			"{",
+			"    $0",
+			"}"
+		],
+		"description": "TESTCASES"
+	},
+	"SIEVE OF ERATOSTHENES": {
+		"prefix": "SIEVE",
+		"body": [
+			"void __sieve(int n = 1000000)",
+			"{",
+			"    vector<bool> __PRIME;",
+			"    __PRIME.resize(n + 1, true);",
+			"    __PRIME[0] = __PRIME[1] = 0;",
+			"    int sqtn = sqrt(n);",
+			"    for (int p = 2; p <= sqtn; ++p)",
+			"        if (__PRIME[p])",
+			"            for (int i = p * p; i <= n; i += p)",
+			"                __PRIME[i] = false;",
+			"",
+			"    // vector<int> prime = {2};",
+			"    // for (int i = 3; i < __PRIME.size(); i+=2)",
+			"    //     if (__PRIME[i])",
+			"    //         prime.emplace_back(i);",
+			"    return;",
+			"}"
+		],
+		"description": "SIEVE OF ERATOSTHENES"
+	},
+	"DEBUG": {
+		"prefix": "DEBUGGER",
+		"body": [
+			"#define debug(x)                    \\",
+			"    cerr << #x << \" = \", _print(x); \\",
+			"    cerr << endl;",
+			"void _print(int t) { cerr << t; }",
+			"void _print(string t) { cerr << t; }",
+			"void _print(char t) { cerr << t; }",
+			"void _print(double t) { cerr << t; }",
+			"template <class T, class V>",
+			"void _print(pair<T, V> p);",
+			"template <class T>",
+			"void _print(vector<T> v);",
+			"template <class T>",
+			"void _print(set<T> v);",
+			"template <class T, class V>",
+			"void _print(map<T, V> v);",
+			"template <class T>",
+			"void _print(unordered_set<T> v);",
+			"template <class T, class V>",
+			"void _print(unordered_map<T, V> v);",
+			"template <class T>",
+			"void _print(multiset<T> v);",
+			"template <class T, class V>",
+			"void _print(pair<T, V> p) { cerr << \"{\", _print(p.first), cerr << \" ,\", _print(p.second), cerr << \"}\\n\"; }",
+			"template <class T>",
+			"void _print(vector<T> v)",
+			"{",
+			"    cerr << \"[ \";",
+			"    for (T i : v)",
+			"        _print(i), cerr << \" \";",
+			"    cerr << \"]\\n\";",
+			"}",
+			"template <class T>",
+			"void _print(set<T> v)",
+			"{",
+			"    cerr << \"[ \";",
+			"    for (T i : v)",
+			"        _print(i), cerr << \" \";",
+			"    cerr << \"]\\n\";",
+			"}",
+			"template <class T>",
+			"void _print(unordered_set<T, __CH> v)",
+			"{",
+			"    cerr << \"[ \";",
+			"    for (T i : v)",
+			"        _print(i), cerr << \" \";",
+			"    cerr << \"]\\n\";",
+			"}",
+			"template <class T>",
+			"void _print(multiset<T> v)",
+			"{",
+			"    cerr << \"[ \";",
+			"    for (T i : v)",
+			"        _print(i), cerr << \" \";",
+			"    cerr << \"]\\n\";",
+			"}",
+			"template <class T, class V>",
+			"void _print(map<T, V> v)",
+			"{",
+			"    cerr << \"[\\n\";",
+			"    for (auto i : v)",
+			"        _print(i), cerr << \"\\n\";",
+			"    cerr << \"]\\n\";",
+			"}",
+			"template <class T, class V>",
+			"void _print(unordered_map<T, V, __CH> v)",
+			"{",
+			"    cerr << \"[\\n\";",
+			"    for (auto i : v)",
+			"        _print(i), cerr << \"\\n\";",
+			"    cerr << \"]\\n\";",
+			"}",
+			"//-------------------------------------"
+		],
+		"description": "DEBUGGER"
+	},
+	"DIVISORS": {
+		"prefix": "DIVISORS",
+		"body": [
+			"vector<int> getDIVISORS(int n)",
+			"{",
+			"    vector<int> ans;",
+			"    int sqt = sqrt(n);",
+			"    for (int i = 1; i <= sqt; i++)",
+			"        if (n % i == 0)",
+			"            if (n / i == i)",
+			"                ans.emplace_back(i);",
+			"            else",
+			"                ans.emplace_back(n / i);",
+			"",
+			"    return ans;",
+			"}"
+		],
+		"description": "DIVISORS"
+	},
+	"Extended Euclid": {
+		"prefix": "exEuclid",
+		"body": [
+			"class Triplet",
+			"{",
+			"public:",
+			"    int x, y, gcd;",
+			"    Triplet(int _x, int _y, int _gcd) { x = _x, y = _y, gcd = _gcd; }",
+			"};",
+			"Triplet exEuclid(int a, int b)",
+			"{",
+			"    if (b == 0)",
+			"    {",
+			"        Triplet ans(1, 0, a);",
+			"        return ans;",
+			"    }",
+			"    Triplet dash = exEuclid(b, a % b);",
+			"    Triplet ans(dash.y, (dash.x - ((a / b) * dash.y)), dash.gcd);",
+			"    return ans;",
+			"}",
+			"int modInverse(int a, int m)",
+			"{",
+			"    int x = exEuclid(a, m).x;",
+			"    return (x % m + m) % m;",
+			"}",
+			""
+		],
+		"description": "Extended Euclid"
+	},
+	"PBDS": {
+		"prefix": "pbds",
+		"body": [
+			"#include <ext/pb_ds/assoc_container.hpp>",
+			"#include <ext/pb_ds/tree_policy.hpp>",
+			"using namespace __gnu_pbds;",
+			"typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update> PBDS;"
+		],
+		"description": "Ordered Set"
+	},
+	"INPUT": {
+		"prefix": "inout",
+		"body": [
+			"#ifndef ONLINE_JUDGE",
+			"    freopen(\"in.txt\", \"r\", stdin);",
+			"    freopen(\"out.txt\", \"w\", stdout);",
+			"    freopen(\"orror.txt\", \"w\", stderr);",
+			"#endif"
+		],
+		"description": "INPUT"
+	}
+}
