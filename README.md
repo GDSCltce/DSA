@@ -9,7 +9,7 @@ This repository aims to provide a centralized resource for learning and understa
 
 
 ## Credits
-This DSA repository is made possible by the contributions of many individuals. In particular, I would like to extend special thanks to Hanazala Ansari (https://github.com/asimaries)for their significant contributions to this project. Their dedication and expertise have greatly enriched the contents of this repository.
+This DSA repository is made possible by the contributions of many individuals. In particular, I would like to extend special thanks to Hanazala Ansari (https://github.com/asimaries) for their significant contributions to this project. Their dedication and expertise have greatly enriched the contents of this repository.
 
 If you find this repository helpful, consider giving it a star and sharing it with others who might benefit from it.
 
